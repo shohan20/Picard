@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<div>
+<div class="center">
 	<form action="process.php" method="POST">
 		<p>
 			<label>Email:</label>
