@@ -1,12 +1,22 @@
 div {
+   
+	position: absolute;
+    right: 36%;
+    top: 25%;
     width: 25%;
     border-radius: 4px;
     background-color: #f2f2f2;
     padding: 20px;
+    
 }
 
 .center {
-    margin: auto; 
+		margin:auto;
+
+}
+
+.body {
+    background-image: "1.jpg";
 }
 
 input[type=email], select {
