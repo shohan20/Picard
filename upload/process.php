@@ -12,7 +12,14 @@ if(!empty($_FILES['files']['name'][0])){
 		$file_ext=strtolower(end($file_ext));
 		$check = getimagesize($file_tmp);
     		if($check !== false && $file_error==0) {
-    			$file_name_new=uniqid('',true).'.'.$file_ext;
+    				$connection= mysqli_connect("localhost", "root", "abcd");
+					mysqli_select_db($connection,"login");
+					$result = mysqli_query($connection,"insert into uploads(user_id) values('".$_SESSION['id']."');") or die("Failed to query database ".mysqli_error($connection));
+
+					$resul = mysqli_query($connection,"SELECT LAST_INSERT_ID();") or die("Failed to query database ".mysqli_error($connection));
+					$row =mysqli_fetch_array($resul);
+    				$file_name_new=$row['LAST_INSERT_ID()'].'.'.$file_ext;
+
     			if (!file_exists($_SESSION['id'])) {
     				mkdir($_SESSION['id'], 0777, true);
     				$file_destination=$_SESSION['id'].'/'.$file_name_new;
