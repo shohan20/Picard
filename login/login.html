@@ -3,23 +3,60 @@
 <html>
 <head>
 	<title>Login Page</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<style>
-body {
-    background: url(1.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<script src="../dist/sweetalert.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../dist/sweetalert.css">
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
 	
-}
-</style>
+	<script>
+		$(document).ready(function(){
+		$(".register").hide();
+		$(".forget").hide();
+		$("#account").click(function(){
+			$(".login").hide();
+			$(".register").show();
+		});
+
+		$("#login").click(function(){
+			$(".register").hide();
+			$(".login").show();
+		});
+
+		$("#flogin").click(function(){
+			$(".forget").hide();
+			$(".login").show();
+		});
+
+
+		$("#forget").click(function(){
+			$(".login").hide();
+			$(".forget").show();
+		});
+	});
+	</script>
+
+	<script>
+	function forgotPassCon() {
+  		var xhttp = new XMLHttpRequest();
+  		xhttp.onreadystatechange = function() {
+    	if (this.readyState == 4 && this.status == 200) {
+    		if(this.responseText!="failed")
+      			alert("sent");
+      		else
+      			alert("Oops...");
+    	}
+  		};
+  		xhttp.open("POST", "../php/forgetProcess.php", true);
+  		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  		xhttp.send("email="+document.getElementById("email").value); 
+  	} 
+	</script>
+
+</head>
+
 <body>
-
-
-<div class="center">
-	<form action="process.php" method="POST">
+<div class="center login">
+	<form action="../php/loginProcess.php" method="POST">
 		<p>
 			<label>Email:</label>
 			<input type="email" name="email" placeholder="Enter email.."/>
@@ -30,10 +67,49 @@ body {
 		</p>
 		<p>
 			<input type="submit" name="submit" value="Login"/>
+			<p type="register">Not register? 
+			<span id="account" type="account">Create an account</span><br>
+			<span id="forget" type="account"> Forgot your password?</span></p>
+
 		</p>
 	</form>
 </div>
 
+<div class="register center">
+	<form action="../php/registerProcess.php" method="POST">
+		<p>
+			<label>Email:</label>
+			<input type="email" name="email" placeholder="Enter email.."/>
+		</p>
+		<p>
+			<label>Password:</label>
+			<input type="password" name="password" placeholder="Enter password.."/>
+		</p>
+		<p>
+			<label>Re-Type Password:</label>
+			<input type="password" name="repassword" placeholder="Re-type password.."/>
+		</p>
+		<p>
+			<input type="submit" name="submit" value="Register"/>
+			<p type="register">Already register? 
+			<span id="login" type="account">Login</span><br>
+			</p>
+		</p>
+	</form>
+</div>
+
+<div class="forget center">
+
+		<p>
+			<label>Email:</label>
+			<input type="email" name="email" id="email" placeholder="Enter email.."/>
+		</p>
+		<p>
+			<button type="submit" name="submit" onclick="forgotPassCon()">Submit</button>
+			<p type="register"> <span id="flogin" type="account">Login</span></p>
+		</p>
+
+</div>
 
 </body>
 
