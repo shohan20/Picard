@@ -7,9 +7,9 @@ body {
     
 }
 
-div {
-	position: absolute;
-	color: gray;
+div.center {
+    position: absolute;
+    color: gray;
     right: 36%;
     top: 25%;
     width: 25%;
@@ -18,9 +18,10 @@ div {
     padding: 20px;
 }
 
+
 .center {
 
-	margin:auto;
+    margin:auto;
 
 }
 
@@ -70,14 +71,14 @@ button[type=submit] {
 }
 
 p[type=register] {
-	color: gray;
-	text-align: center;
-	font-size: 15px;
+    color: gray;
+    text-align: center;
+    font-size: 15px;
 }
 
 span[type=account]{
-	cursor: pointer; 
-	cursor: hand;
-	color: dodgerblue;
+    cursor: pointer; 
+    cursor: hand;
+    color: dodgerblue;
 }
 
