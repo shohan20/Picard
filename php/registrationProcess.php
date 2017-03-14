@@ -11,7 +11,7 @@
 	}
 	else{
 	$result = mysqli_query($connection,"insert into users(email,password) values('$email','$password')") or die("Failed to query database ".mysqli_error($connection));
-		header("location: ../login/login.php");
+		header("location: ../login/login.html");
 	}
 }
 ?>
