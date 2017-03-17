@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'serverConnection.php';
 if(!empty($_FILES['files']['name'][0])){
 	$files= $_FILES['files'];
 	$uploaded= array();
@@ -12,7 +13,7 @@ if(!empty($_FILES['files']['name'][0])){
 		$file_ext=strtolower(end($file_ext));
 		$check = getimagesize($file_tmp);
     		if($check !== false && $file_error==0) {
-    				$connection= mysqli_connect("localhost", "root", "abcd");
+    				$connection=serverConnect();
 					mysqli_select_db($connection,"login");
 					$result = mysqli_query($connection,"insert into uploads(user_id) values('".$_SESSION['id']."');") or die("Failed to query database ".mysqli_error($connection));
 
