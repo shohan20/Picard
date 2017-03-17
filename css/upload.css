@@ -1,0 +1,42 @@
+body {
+    background: url(../login/1.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+div.center {
+    position: absolute;
+    color: gray;
+    right: 36%;
+    top: 36%;
+    width: 25%;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: auto;
+}
+input[type=file],
+select {
+    font-weight: bold;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit],
+select {
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    background-color: dodgerblue;
+    border: 1px solid dodgerblue;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
