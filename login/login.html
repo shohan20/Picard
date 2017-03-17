@@ -4,62 +4,13 @@
 <head>
 	<title>Login Page</title>
 	<link rel="stylesheet" type="text/css" href="../css/login.css">
-	<script src="../dist/sweetalert.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="../dist/sweetalert.css">
 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
 	<script src="bower_components/es6-promise/es6-promise.auto.min.js"></script>
-
-<script src="../dist/sweetalert2.min.js"></script>
-<link rel="stylesheet" href="../dist/sweetalert2.min.css">
-	<script>
-		$(document).ready(function(){
-			
-		$(".register").hide();
-		$(".forget").hide();
-		$("#account").click(function(){
-			$(".login").hide();
-			$(".register").show();
-		});
-
-		$("#login").click(function(){
-			$(".register").hide();
-			$(".login").show();
-		});
-
-		$("#flogin").click(function(){
-			$(".forget").hide();
-			$(".login").show();
-		});
-
-
-		$("#forget").click(function(){
-			$(".login").hide();
-			$(".forget").show();
-		});
-	});
-	</script>
-
-	<script>
-	function forgotPassCon() {
-  		var xhttp = new XMLHttpRequest();
-  		xhttp.onreadystatechange = function() {
-    	if (this.readyState == 4 && this.status == 200) {
-    		if(this.responseText!="failed"){
-      			//alert("sent");
-      			swal("Sent", "A mail has been sent", "success");
-
-      			// window.location="../login/login.html";
-    		}
-      		else
-      			swal("Nope", "You aren't registered", "error");
-    	}
-  		};
-  		xhttp.open("POST", "../php/forgetProcess.php", true);
-  		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  		xhttp.send("email="+document.getElementById("email").value); 
-  	} 
-	</script>
-
+	<script src="../dist/sweetalert2.js"></script>
+	<link rel="stylesheet" href="../dist/sweetalert2.css">
+	<script src="../dist/sweetalert2.min.js"></script>
+	<link rel="stylesheet" href="../dist/sweetalert2.min.css">
+	<script src="../js/login.js"></script>
 </head>
 
 <body>
