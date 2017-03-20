@@ -11,7 +11,7 @@
 	if($row['email']==$email && $row['password']==$password){
 		$_SESSION['id']=$row['id'];
 		$_SESSION['email']=$row['email'];
-		header("location: upload.html");
+		header("location: ../gallery.php");
 	}
 	else
 		echo "Failed to login";
