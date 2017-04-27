@@ -1,6 +1,4 @@
-body {
-	background: url("../img/background.jpg") no-repeat fixed center center / 100% auto rgba(0, 0, 0, 0);
-}
+
 nav {
 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
 	position: absolute;
@@ -50,74 +48,7 @@ nav ul li ul li {
 .top-nav li ul li a {
 	background: none repeat scroll 0 0 rgb(0, 30, 34);
 }
-#fourth-block h2 {
-	color: #fff;
-}
-#fourth-block p {
-	color: #fff;
-}
-#first-block, #second-block, #third-block, #fourth-block {
-	text-align: center;
-	padding: 4.5em 0;
-}
-#carousel {
-	background: #fff;
-}
-#first-block {
-	background: #fff;
-}
-#second-block {
-	background: none repeat scroll 0 0 rgba(0, 30, 34, 0.85);
-}
-#third-block {
-	background: #fff;
-}
-#fourth-block {
-	background: rgb(0, 30, 34);
-}
-footer {
-	background: none repeat scroll 0 0 #2fcbe0;
-	padding: 1.5em 0;
-}
-footer p, footer a:link, footer a:visited, footer a:hover {
-	color: #fff;
-}
-.carousel-text {
-	display: block;
-	position: absolute;
-	top: 25%;
-	width: 100%;
-	z-index: 999;
-}
-.carousel-text h2 {
-	background: none repeat scroll 0 0 #fff;
-	color: rgb(0, 30, 34);
-	display: inline-block;
-	padding: 0.3125em 0.625em;
-	font-size: 2em;
-}
-.carousel-text p {
-	background: none repeat scroll 0 0 rgba(0, 30, 34, 0.85);
-	color: #fff;
-	display: inline-block;
-	font-size: 1.2em;
-	padding: 0.625em 0.8em;
-}
-#first-block i {
-	background: none repeat scroll 0 0 #2fcbe0;
-	border-radius: 100px;
-	color: #fff;
-	display: block;
-	line-height: 100px;
-	margin: 0 auto;
-	width: 100px;
-}
-section h2 {
-	font-size: 2.5em;
-	font-weight: 300;
-	margin: 0;
-	text-transform: uppercase;
-}
+
 p.subtitile {
 	color: #999;
 	margin: 0 0 3.5em;

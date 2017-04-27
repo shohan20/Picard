@@ -13,7 +13,7 @@ include 'serverConnection.php';
     		$targetDir="../upload/";
     				$connection=serverConnect();
 					mysqli_select_db($connection,"login");
-					$result = mysqli_query($connection,"insert into uploads(user_id) values('".$_SESSION['id']."');") or die("Failed to query database ".mysqli_error($connection));
+					$result = mysqli_query($connection,"insert into uploads(user_id,privacy,description) values('".$_SESSION['id']."','1','');") or die("Failed to query database ".mysqli_error($connection));
 
 					$resul = mysqli_query($connection,"SELECT LAST_INSERT_ID();") or die("Failed to query database ".mysqli_error($connection));
 					$row =mysqli_fetch_array($resul);
@@ -43,8 +43,7 @@ include 'serverConnection.php';
 				$failed=$file_name." extension ".$file_ext." not allowed";
 			}
 		}
-		else
-			echo "not found";
+		
 	/*if(!empty($uploaded)){
 		print_r($uploaded);
 	}

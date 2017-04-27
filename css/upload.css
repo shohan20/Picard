@@ -40,7 +40,7 @@
 }
 
 /* The Close Button */
-.close {
+.close{
     color: white;
     float: right;
     font-size: 28px;
@@ -48,7 +48,7 @@
 }
 
 .close:hover,
-.close:focus {
+.close:focus{
     color: #000;
     text-decoration: none;
     cursor: pointer;
@@ -81,7 +81,21 @@ div.imag{
     margin: 5px;
     border: 1px solid #ccc;
     padding: 0;
+    background-color: white;
 }
+
+div.tex{
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+     -webkit-transition: -webkit-transform 2s;
+     transition: transform .5s;
+     width: 25%;
+    height: auto;
+    float: left;
+    margin: 5px;
+    border: 1px solid #ccc;
+    padding: 0;
+}
+
 
 div.imag:hover{
       -webkit-transform: scale(1.5,1.5); /* Safari */
@@ -91,7 +105,7 @@ div.imag:hover{
     border: 1px solid #777;
 }
 
-img.full{
+img.full
     display: block;
     width: 100%;
 }

@@ -5,11 +5,13 @@ $(document).ready(function(){
 		$("#account").click(function(){
 			$(".login").hide();
 			$(".register").show();
+			$('h1#clog').html("Sign Up");
 		});
 
 		$("#login").click(function(){
 			$(".register").hide();
 			$(".login").show();
+			$('h1#clog').html("login");
 		});
 
 		$("#flogin").click(function(){

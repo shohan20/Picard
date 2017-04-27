@@ -8,11 +8,7 @@ body {
 }
 
 div.center {
-    position: absolute;
     color: gray;
-    right: 36%;
-    top: 25%;
-    width: 25%;
     border-radius: 4px;
     background-color: #f2f2f2;
     padding: 20px;
@@ -27,6 +23,16 @@ div.center {
 
 
 input[type=email], select {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=text], select {
     width: 100%;
     padding: 10px 20px;
     margin: 8px 0;
